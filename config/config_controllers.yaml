@@ -1,0 +1,22 @@
+# Robot name goes here
+Assem1:
+  # default controller
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Controller 1
+  RearWheelJointController:
+    type: velocity_controllers/JointVelocityController
+    joint: RearWheelJoint  
+    pid : {p: 100.0 , i: 0.0 , d: 0.0} 
+
+  FrontRightRotateJointController:
+    type: effort_controllers/JointPositionController
+    joint: FrontRightRotateJoint 
+    pid : {p: 100.0 , i: 0.0 , d: 0.0} 
+
+  FrontLeftWheelRotateJointController:
+    type: effort_controllers/JointPositionController
+    joint: FrontLeftWheelRotateJoint  
+    pid : {p: 100.0 , i: 0.0 , d: 0.0} 

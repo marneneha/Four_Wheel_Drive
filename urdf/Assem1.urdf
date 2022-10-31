@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Assem1">
+  <link
+    name="chassis_base_link">
+    <inertial>
+      <origin
+        xyz="-0.512674531540059 0.000153014474687185 -0.050898093669952"
+        rpy="0 0 0" />
+      <mass
+        value="19.1857141768798" />
+      <inertia
+        ixx="0.306910302250378"
+        ixy="-0.000859429568991598"
+        ixz="-6.54892569443388E-10"
+        iyy="1.21011395991777"
+        iyz="-1.84958226856854E-10"
+        izz="1.51472867661581" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="RearWheelLink">
+    <inertial>
+      <origin
+        xyz="0.000948144504491211 -0.241806141125486 -2.22044604925031E-16"
+        rpy="0 0 0" />
+      <mass
+        value="1.93947210686836" />
+      <inertia
+        ixx="0.00677424703879588"
+        ixy="-2.32901067750332E-05"
+        ixz="-7.11626362833658E-08"
+        iyy="0.0127138524806755"
+        iyz="-2.79035355661413E-10"
+        izz="0.00677396797023345" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/RearWheelLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/RearWheelLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RearWheelJoint"
+    type="revolute">
+    <origin
+      xyz="-0.7836 0.24183 -0.057144"
+      rpy="0 0 0" />
+    <parent
+      link="chassis_base_link" />
+    <child
+      link="RearWheelLink" />
+    <axis
+      xyz="-0.0039211 0.99999 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="FrontRightWheelLink">
+    <inertial>
+      <origin
+        xyz="0.000641271779954732 0.0281208296775413 2.11071373823479E-07"
+        rpy="0 0 0" />
+      <mass
+        value="1.03741013370022" />
+      <inertia
+        ixx="0.00349565083995949"
+        ixy="6.53432629648742E-05"
+        ixz="-5.42230800612793E-08"
+        iyy="0.0063610036154418"
+        iyz="1.22628256521874E-09"
+        izz="0.00349433435996735" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/FrontRightWheelLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/FrontRightWheelLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FrontRightWheelJoint"
+    type="revolute">
+    <origin
+      xyz="-0.12294 -0.24127 -0.057153"
+      rpy="0 0 0" />
+    <parent
+      link="chassis_base_link" />
+    <child
+      link="FrontRightWheelLink" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="FrontRightROtateLink">
+    <inertial>
+      <origin
+        xyz="0.000578786386318815 0.0253934047799623 1.11022302462516E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.969736053434178" />
+      <inertia
+        ixx="0.00338855006783689"
+        ixy="6.76585972290175E-05"
+        ixz="-5.42162701930126E-08"
+        iyy="0.00635542977389955"
+        iyz="1.23573972851785E-09"
+        izz="0.00338705390311594" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/FrontRightROtateLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/FrontRightROtateLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FrontRightRotateJoint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="FrontRightWheelLink" />
+    <child
+      link="FrontRightROtateLink" />
+    <axis
+      xyz="0.022787 0.99974 0" />
+    <limit
+      effort="0"
+      velocity="3.14" />
+  </joint>
+  <link
+    name="FrontLeftWheelLink">
+    <inertial>
+      <origin
+        xyz="-0.000640874872750621 -0.0281208387241613 -3.74475280451314E-07"
+        rpy="0 0 0" />
+      <mass
+        value="1.03741013370022" />
+      <inertia
+        ixx="0.00349572801412387"
+        ixy="6.53416039769622E-05"
+        ixz="2.29870879986147E-08"
+        iyy="0.00636100365097488"
+        iyz="-5.33552105019425E-10"
+        izz="0.00349425715026989" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/FrontLeftWheelLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/FrontLeftWheelLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FrontLeftWheelJoint"
+    type="revolute">
+    <origin
+      xyz="-0.11715 0.24229 -0.057144"
+      rpy="0 0 0" />
+    <parent
+      link="chassis_base_link" />
+    <child
+      link="FrontLeftWheelLink" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="FrontLeftWheelRotateLink">
+    <inertial>
+      <origin
+        xyz="-0.000578786386318822 -0.0253934047799623 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.969736053434178" />
+      <inertia
+        ixx="0.00338862723744388"
+        ixy="6.76568383188489E-05"
+        ixz="2.29807160886008E-08"
+        iyy="0.00635542981399"
+        iyz="-5.23794492231945E-10"
+        izz="0.00338697669341849" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/FrontLeftWheelRotateLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/FrontLeftWheelRotateLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FrontLeftWheelRotateJoint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="FrontLeftWheelLink" />
+    <child
+      link="FrontLeftWheelRotateLink" />
+    <axis
+      xyz="-0.022787 -0.99974 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="3.14" />
+  </joint>
+</robot>
